@@ -35,9 +35,9 @@ public class Lesson3 {
 
         // Третье задание
 
-        if (a > b && a < c || a < b && a > c) {
+        if (a >= b && a <= c || a <= b && a >= c) {
             System.out.println("а является средним числом");
-        } else if (b > a && b < c || b < a && b > c) {
+        } else if (b >= a && b <= c || b <= a && b >= c) {
             System.out.println("b является средним числом");
         } else {
             System.out.println("c является средним числом");
@@ -53,21 +53,23 @@ public class Lesson3 {
             System.out.println("Точка находится в нижней правой четверти");
         } else if (x < 0 && y < 0) {
             System.out.println("Точка находится в нижней левой четверти");
-        } else {
+        } else if (x < 0 && y > 0) {
             System.out.println("Точка находится в верхней левой четверти");
+        } else if (x != 0 && y == 0) {
+            System.out.println("Точка находится на оси х ");
+        } else if (y !=0 && x == 0) {
+            System.out.println("Точка находится на оси у ");
+        } else if (x == 0 && y == 0) {
+            System.out.println("Точка находится в начале координат");
         }
+
 
         // Пятое задание
 
         int i = 2028;
 
-        if (i % 4 == 0) {
-            if ((i % 100 == 0 && i % 400 == 0) || (i % 100 != 0)) {
+        if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0))  {
                 System.out.println("Високосный год");
-            }
-            else {
-                System.out.println("Не является високосным");
-            }
         }
         else {
             System.out.println("Не является високосным");
